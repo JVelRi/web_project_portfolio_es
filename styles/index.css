@@ -1,0 +1,285 @@
+@import "./fonts.css";
+
+:root {
+  background-color: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.body {
+  max-width: 1440px;
+  font-family: "Open Sans", "Sans-serif", "Arial";
+  font-size: 1rem;
+  margin-inline: auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 387px;
+  padding: 0 120px;
+  z-index: 1;
+}
+
+.hero__content {
+  max-width: 793px;
+  min-width: 453px;
+  margin-top: 89px;
+}
+
+.hero__name {
+  font-size: 4rem;
+  font-family: "Archive Black", "Sans-serif", "Arial";
+  margin: 0;
+}
+
+.hero__photo {
+  width: 387px;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: 40px 0 0 20px;
+}
+
+.hero__decoration {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #6d6dff;
+  filter: blur(400px);
+  top: 240px;
+  right: 507px;
+  z-index: -1;
+}
+
+.hero__subtitle {
+  opacity: 50%;
+  margin-top: 15px;
+}
+
+.hero__bio {
+  margin-top: 30px;
+}
+
+.hero__links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero__link {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 30px;
+  font-weight: 600;
+}
+
+.hero__link::after {
+  content: "";
+  position: absolute;
+  top: calc(1rem + 5px);
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #4c1a97, #6d6dff);
+}
+
+.hero__link:hover {
+  opacity: 50%;
+}
+
+.skills {
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.skills__title {
+  font-size: 40px;
+  font-family: "Archive Black", "Sans-serif", "Arial";
+  margin-top: 100px;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.skills__icon {
+  width: 50px;
+}
+
+.projects {
+  margin-top: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: minmax(290px, 590px) minmax(290px, 590px);
+  gap: 20px;
+}
+
+.projects__card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #1c1c1c;
+}
+
+.projects__card__image {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.projects__card__image__decoration {
+  position: absolute;
+  left: 12px;
+  top: 280px;
+  z-index: 1;
+}
+
+.projects__card__image__decoration__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.projects__card__text {
+  padding-left: 30px;
+  margin: 30px 30px;
+}
+
+.projects__card__text__subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.projects__card__text__description {
+  font-size: 1rem;
+  margin: 20px 0 0 0;
+}
+
+.projects__card__text__footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.projects__card__text__footer__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.projects__card__text__footer__anchor {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.projects__card__text__footer__anchor:hover {
+  opacity: 50%;
+}
+
+.projects__card__text__footer__github {
+  display: flex;
+  flex-direction: row;
+  opacity: 60%;
+  font-size: 16px;
+  align-content: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.projects__card__text__footer__demo {
+  color: #6d6dff;
+  font-size: 16px;
+  align-content: center;
+  margin: 0 20px 0 0;
+}
+
+.contact {
+  justify-self: center;
+  width: calc(100vw / 5);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+}
+
+.contact__decoration {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #6d6dff;
+  filter: blur(400px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.contact__title {
+  font-size: 40px;
+  font-family: "Archive Black", "Sans-serif", "Arial";
+  margin: 0;
+}
+
+.contact__mail {
+  color: #6d6dff;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.contact__mail:hover {
+  opacity: 50%;
+}
+
+.contact__social {
+  display: flex;
+  margin: 30px 0 0 0;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.contact__social__links {
+  list-style-type: none;
+}
+
+.contact__social__link:hover {
+  opacity: 50%;
+}
+
+@media (max-width: 1023px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .hero__photo {
+    width: 216px;
+    height: 280px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero__photo {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+  }
+}
